@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AngelLopez15/AppWebServerNode/issues"
   },
-  "homepage": "https://github.com/AngelLopez15/AppWebServerNode#readme"
+  "homepage": "https://github.com/AngelLopez15/AppWebServerNode#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
