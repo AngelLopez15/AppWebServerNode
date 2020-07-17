@@ -7,6 +7,10 @@ const app = express()
 const hbs = require('hbs')
 require('./hbs/helpers')
 
+// para obtener el puerto que nos de heroku o casa que no exista nos de el 3000 en 
+// el servidor local
+const port = process.env.PORT || 3000
+
 // creando un midleware para servir paginas estaticas
 // debemos comprender que todo lo que esta en la carpeta public va a ser de dominio publico
 // con __dirname estamos diciendo que toda la ruta anterior le concatene el /public
@@ -44,6 +48,6 @@ app.get('/features', (req, res) => {
 // })
 
 //podemos poner un callback
-app.listen(3000, () => {
-    console.log('Escuchando peticones en el puerto 3000')
+app.listen(port, () => {
+    console.log(`Escuchando peticones en el puerto ${port}`)
 })
