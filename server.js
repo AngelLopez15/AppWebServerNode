@@ -5,7 +5,7 @@ const app = express()
 
 // importando  el hbs
 const hbs = require('hbs')
-
+require('./hbs/helpers')
 
 // creando un midleware para servir paginas estaticas
 // debemos comprender que todo lo que esta en la carpeta public va a ser de dominio publico
@@ -16,17 +16,16 @@ app.use(express.static(__dirname + '/public'))
 hbs.registerPartials(__dirname+'/views/partials')
 app.set('view engine', 'hbs')
 
+
 //renderizando la pagina desde el midle y el archivo hbs 
 app.get('/', (req, res) =>{
     res.render('home',{
-        name:'Angel',
-        anio: new Date().getFullYear()
+        name:'angel lopez'
     })
 })
 app.get('/features', (req, res) => {
     res.render('features',{
-        name:'Angel',
-        anio: new Date().getFullYear()
+        name:'angel lopez'
     })
 } )
 // // configuramos una solicitud GET cuando el path sea un /
